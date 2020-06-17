@@ -7,7 +7,7 @@ window._ = require('lodash');
  */
 
 try {
-    // window.Popper = require('popper.js').default;
+    window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
@@ -43,7 +43,9 @@ window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: process.env.MIX_PUSHER_APP_KEY,
-    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    // key: process.env.MIX_PUSHER_APP_KEY,
+    // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    key: '3789ce4645a0b40fb50d',
+    cluster: '634c2799ebc143079b68',
     forceTLS: true
 });
